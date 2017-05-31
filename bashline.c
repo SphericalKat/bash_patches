@@ -2465,7 +2465,7 @@ bash_groupname_completion_function (text, state)
      const char *text;
      int state;
 {
-#if defined (__WIN32__) || defined (__OPENNT) || !defined (HAVE_GRP_H)
+#if defined (__WIN32__) || defined (__OPENNT) || defined(__ANDROID__) || !defined (HAVE_GRP_H)
   return ((char *)NULL);
 #else
   static char *gname = (char *)NULL;
