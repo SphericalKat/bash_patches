@@ -582,9 +582,6 @@ get_working_directory (for_whom)
 #endif
       if (the_current_working_directory == 0)
 	{
-	  fprintf (stderr, _("%s: error retrieving current directory: %s: %s\n"),
-		   (for_whom && *for_whom) ? for_whom : get_name_for_error (),
-		   _(bash_getcwd_errstr), strerror (errno));
 	  return (char *)NULL;
 	}
     }
