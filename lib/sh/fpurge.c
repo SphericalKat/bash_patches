@@ -31,7 +31,7 @@
 #endif
 extern int fpurge __P((FILE *stream));
 
-#if HAVE___FPURGE                   /* glibc >= 2.2, Haiku, Solaris >= 7 */
+#if defined HAVE___FPURGE && defined HAVE_STDIO_EXT_H /* glibc >= 2.2, Haiku, Solaris >= 7 */
 # include <stdio_ext.h>
 #endif
 #include <stdlib.h>
