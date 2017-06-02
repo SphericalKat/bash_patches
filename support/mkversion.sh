@@ -150,6 +150,12 @@ echo
 echo "/* A version string for use by sccs and the what command. */"
 echo "#define SCCSVERSION \"@(#)Bash version ${sccs_string}\""
 
+# Output the Git commit hash
+git_commit=`git rev-parse --short HEAD`
+echo
+echo "/* Hash of the Git commit that generated this build. */"
+echo "#define GIT_COMMIT \"${git_commit}\""
+
 # extern function declarations
 #echo
 #echo '/* Functions from version.c. */'

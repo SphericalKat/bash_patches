@@ -86,6 +86,7 @@ show_shell_version (extended)
   printf (_("GNU bash, version %s (%s)\n"), shell_version_string (), MACHTYPE);
   if (extended)
     {
+      printf ("%s\n", _("kzxiv.net " __DATE__ " " __TIME__ " (" GIT_COMMIT ")"));
       printf ("%s\n", _(bash_copyright));
       printf ("%s\n", _(bash_license));
       printf ("%s\n", _("This is free software; you are free to change and redistribute it."));
