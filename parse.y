@@ -35,6 +35,7 @@
 #endif
 
 #include <stdio.h>
+#include <errno.h>
 #include "chartypes.h"
 #include <signal.h>
 
@@ -132,7 +133,9 @@ extern int here_doc_first_line;
 extern int bash_input_fd_changed;
 #endif
 
+#ifndef errno
 extern int errno;
+#endif
 /* **************************************************************** */
 /*								    */
 /*		    "Forward" declarations			    */
