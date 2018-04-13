@@ -90,6 +90,7 @@ sparc-linux*)	opt_bash_malloc=no ;;	# sparc running linux; requires ELF
 *-opennt*|*-interix*)	opt_bash_malloc=no ;;	# Interix, now owned by Microsoft
 *-nsk*)		opt_bash_malloc=no ;;	# HP NonStop
 *-haiku*)	opt_bash_malloc=no ;;	# Haiku OS
+*-linux-android*)	opt_bash_malloc=no ;;	# Android
 esac
 
 # memory scrambling on free()
