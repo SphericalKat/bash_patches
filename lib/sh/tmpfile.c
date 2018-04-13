@@ -74,6 +74,11 @@ get_sys_tmpdir ()
     return sys_tmpdir;
 #endif
 
+#ifdef __ANDROID__
+  sys_tmpdir = "/data/local/tmp";
+  if (file_iswdir (sys_tmpdir))
+    return sys_tmpdir;
+#else
   sys_tmpdir = "/tmp";
   if (file_iswdir (sys_tmpdir))
     return sys_tmpdir;
@@ -85,6 +90,7 @@ get_sys_tmpdir ()
   sys_tmpdir = "/usr/tmp";
   if (file_iswdir (sys_tmpdir))
     return sys_tmpdir;
+#endif
 
   sys_tmpdir = DEFAULT_TMPDIR;
 

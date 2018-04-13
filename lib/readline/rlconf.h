@@ -43,7 +43,11 @@
 #define DEFAULT_INPUTRC "~/.inputrc"
 
 /* The ultimate last-ditch filenname for an init file -- system-wide. */
+#ifdef __ANDROID__
+#define SYS_INPUTRC "/system/etc/inputrc"
+#else
 #define SYS_INPUTRC "/etc/inputrc"
+#endif
 
 /* If defined, expand tabs to spaces. */
 #define DISPLAY_TABS
