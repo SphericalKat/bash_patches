@@ -94,7 +94,7 @@
 #define KSH_COMPATIBLE_SELECT
 
 /* Default interactive shell startup file. */
-#define DEFAULT_BASHRC "~/.bashrc"
+#define DEFAULT_BASHRC "/system/etc/bash/bashrc"
 
 /* System-wide .bashrc file for interactive shells. */
 #ifdef __ANDROID__
